@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+<title>Login</title>
+<style>
+    body 
+    {
+  background-image: url('https://images.wallpaperscraft.com/image/single/coast_rocks_sea_228136_1920x1080.jpg');
+    }
+  input {
+    background-color:inherit;
+    }
+    
+div {
+    
+  width: 540px;
+  padding: 105px;
+  margin: 0px;
+    }
+</style>
+
+<script type="text/javascript">
+	function validate() {
+		var name = document.getElementById("Name").value;
+		var pass = document.getElementById("password").value;
+
+		if (name == "" || name == null) {
+			// swal("please enter Name");
+			// alert ( "enter Name" );
+
+			//return false;
+		} else if (pass == "" || pass == null) {
+			alert("please enter password");
+			//return false;
+		} else {
+			document.submit();
+		}
+
+	}
+</script>
+
+</head>
+<body>
+	<div align="center" id="login-box">
+		<div class="left">
+
+			<h1 style="font-size:38px;">Sign in</h1>
+			<form action="OWNER.jsp" method="post">
+				<input style="font-size:15px;" type="text" id="name" name="name" placeholder="Name"
+                                       required/> <br><input style="font-size:15px;" type="password" id="password" name="password"
+                                       placeholder="Password" required /> <br><br>  <input style="font-size:18px;" type="submit"
+					name="signup_submit" value="Login" onclick="return validate()" />
+
+
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
